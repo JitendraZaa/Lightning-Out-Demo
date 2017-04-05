@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login to Salesforce </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon"  type="image/icon"  href="Cloud Red.ico" />
+  </head>
+  <body class="container" style="padding-top: 50px;">
+    <div class="jumbotron">
+      <h1>Login to Salesforce</h1>
+
+		<p>
+          <table  style="width:100%">
+            <tr>
+                <td  style="width:80%"> 
+                    Welcome to Salesforce Lightning Out Demo <br />
+                    To Start using, Select your Salesforce instance <br />
+                    By <a href="http://JitendraZaa.com/blog">Jitendra Zaa
+</a>  
+                </td> 
+                <td style="width:20%">
+                    <img src="Salesforce.png" />
+                </td>
+            </tr>
+          </table>  
+      </p>      
+
+      <p><a id="prodBtn" role="button" style="margin-right:40px" class="btn btn-primary btn-lg">Production</a><a id="sandBtn" role="button" class="btn btn-primary btn-lg">Sandbox</a></p>
+    </div>
+     <script>  
+	 //do not redirect for localhost
+    if (window.location.protocol != "https:" && window.location.hostname != 'localhost'){
+		window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+	}
+	    
+    </script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jqueryCookies.js"></script> 	
+    <script type="text/javascript" src="js/OAuth.js"></script>
+  </body>
+</html>

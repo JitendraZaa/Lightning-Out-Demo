@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Salesforce Lightnig Out Demo 
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon"  type="image/icon"  href="Cloud Red.ico" />
+  </head>
+  <body>
+
+    <nav role="navigation" class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a href="http://JitendraZaa.com/blog" class="navbar-brand">
+           <span class="glyphicon glyphicon-cloud" style="vertical-align : middle" ></span> Salesforce Lightning Out Demo
+          </a>
+        </div> 
+       
+      </div>
+    </nav> 
+
+	<div id="lexcontainer"> 
+	</div>
+  
+         
+  </body>
+  <script src="https://componentdemo-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+  <script type="text/javascript" src="lib/jquery.js">  </script>
+  <script type="text/javascript" src="lib/jqueryCookies.js"> </script>   
+
+<script> 
+var _lightningReady = false;
+if(!$.cookie("AccToken"))
+{ 
+    alert("Login to Salesforce First!!!");
+}else{
+	createChatterFeed('NEWS');
+}
+
+
+
+function setupLightning(callback) {
+	var appName = "c:LightningOutDemo";
+	 
+
+	if (_lightningReady) {
+		if (typeof callback === "function") {
+			callback();
+		}
+	} else {
+	    // Transform the URL for Lightning
+	    var url = $.cookie("InstURL");
+		url = url.replace("my.salesforce", "lightning.force");
+
+	    $Lightning.use(appName, 
+	        function() {
+				_lightningReady = true;
+				document.getElementById("lexcontainer").style.display = "";
+				if (typeof callback === "function") {
+					callback();
+				}
+	        }, url, $.cookie("AccToken"));
+	}
+}
+
+function createChatterFeed(type, subjectId) {
+    setupLightning(function() {
+		$Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "lexcontainer"); 
+    });
+}
+
+</script>
+
+ <style type="text/css"> 
+ 
+     html,body{width:100%;height:100%;} 
+	 
+	.slds-scope:not(html), .slds-scope body, .slds-media__body, .forceChatterStyle .cuf-preamble, .cuf-subPreamble .slds-text-body--small, .slds-post__footer {
+		font-size: 1.0rem !important; 
+	}	 
+ </style>
+</html> 

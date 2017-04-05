@@ -1,0 +1,33 @@
+{
+  "name": "Salesfore_Lightnign_Out_Demo",
+  "version": "0.0.1",
+  "description": "Surface Lightning Component on Node.js Application",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Node.Js",
+    "Lightnig Component",
+	"Lightnig Out",
+    "API",
+    "Salesforce"
+  ],
+  "author": "Jitendra Zaa",
+  "license": "MIT",
+  "dependencies": {
+    "logfmt": "~1.1.2",
+    "express": "~4.7.1",
+    "http": "~0.0.0",
+    "request": "~2.36.0",
+    "body-parser": "~1.6.2",
+	"cors":"2.8.1"
+  },
+  "engines": {
+	    "node": "0.10.x"
+	  }
+}
