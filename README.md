@@ -1,4 +1,4 @@
-# Lightning-Out-Demo 
+# Lightning-Out-Demo  
 Complete source code to showcase using Lightning component in node.js (External websites) by using Lightning Out. It shows how to enable CORS and SSL in Node.js with Video and complete source code.
 
 ![Jitendra Zaa Blog](http://www.jitendrazaa.com/blog/wp-content/uploads/2017/04/Show-Lightning-Component-in-Node.js-using-Lightning-Out-1024x561.png) 
@@ -25,8 +25,8 @@ Copy consumer secret created in connected app and update clientId variable defin
 Save `https://localhost:8081` in **CORS** setting of Salesforce.
 
 ### Step 4
-Run npm install command in the directory where this code is downloaded. It will download all the required node modules
-then run npm start, it will start the server
+Run `npm install` command in the directory where this code is downloaded. It will download all the required node modules.
+Then run `npm start`, it will start the server
 
 ### Step 5
 Navigate to `https://localhost:8081/` in your browser and you would see **Lightning Out** in Action
